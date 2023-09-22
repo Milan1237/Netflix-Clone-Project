@@ -1,0 +1,2 @@
+api key: 80a22e54640832eea3f6ea612dd0acd2
+Image Path: https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg (it is an example)

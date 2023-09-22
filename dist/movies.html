@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="customizeindex.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="movies.js"></script>
+    <script type="module" defer src="search.js"></script>
+    <title>Category Movies</title>
+</head>
+
+<body>
+    
+    <nav
+        class="flex justify-between bg-[var(--background)] sticky left-0 top-0 w-[100%] p-4 z-40  items-center h-[10vh]">
+        <a href="./index.html" id="mainLogo" class="md:!block">
+            <img src="../images/logo.png" class="w-32 h-8" alt="Tvflix_log">
+        </a>
+        <div id="searchHumburgerMain" class="flex items-center md:!w-[40%]  w-20  justify-between md:justify-end ">
+            <div id="searchInput"
+                class="md:!flex md:!w-[80%] w-[0%] left-0 transition-all duration-500 h-12 bg-[var(--white-alpha-20)] rounded-[var(--radius-8)] flex justify-center items-center  ">
+                <input type="text" name="" placeholder="Search here"
+                    class="bg-transparent outline-none w-full px-4 text-white" id="searchValue">
+                <div id="searchLoading" class=" "></div>
+            </div>
+            <div id="searchBar"
+                class=" md:!hidden w-12 h-12 bg-[var(--white-alpha-20)] rounded-[var(--radius-8)] flex justify-center items-center transition-all duration-500 ">
+                <img id="searchToggle" src="../images/search.png" class="h-[50%] w-[50%]" alt="search_icon">
+            </div>
+            <span id="hamburger" class="md:!hidden ">
+                <img src="../images/menu.png" class="h-5 w-5" alt="menu_logo">
+            </span>
+        </div>
+    </nav>
+
+     <!-- 
+            Search Section
+    -->
+
+    <div id="searchModule" class=" min-h-[90vh] hidden bottom-0 bg-[var(--surface)] w-full  fixed    top-[10vh] left-[0px] z-[50] p-4 ">
+        
+        <p class="text-[var(--primary-variant)]">Search for</p>
+        <h1 id="movieName" class="text-[var(--on-surface)] mt-4 text-2xl h-[4rem] line-clamp-2">SpiderMan: Homecoming</h1>
+        <div id="searchMovieContainer" class="grid h-[100%] grid-cols-2  overflow-scroll gap-x-4 md:grid-cols-4 lg:grid-cols-6  gap-y-6">
+        </div>
+    </div>
+
+    <div id="container" class="md:flex w-full  md:h-[90vh] md:overflow-hidden bg-[var(--background)] ">
+
+        <div id="mainLodingScreen" class="fixed top-[10vh] left-[0] flex justify-center items-center h-full w-full bg-[var(--surface)] z-[60]">
+            <div class="border-t-4 border-r-4 border-[var(--primary)] h-[60px] w-[60px] mainScreenLoading"></div>
+        </div>
+        <!-- 
+            Sidebar Section
+        -->
+        <!--To make below div dissappear and appear make the width to 0-->
+        <div id="sidebar"
+            class="transition-all  duration-500 absolute md:static top-[10vh] left-0 w-[0%] md:w-[25%]  max-w-[350px]  z-20 overflow-y-auto">
+            <div class="border-[var(--text-color)]">
+                <div id="genreLanguage" class="mx-6 py-8 w-full h-fit overflow-hidden">
+                    <div id="genre">
+                        <h3 class="text-[var(--on-surface)] font-bold text-lg overflow-hidden  ">Genre</h3>
+                    </div>
+                    <h3 class="text-[var(--on-surface)] font-bold text-lg  ">Languages</h3>
+                    <a href="detail.html"
+                        class="text-[var(--text-color)]  font-semibold my-4 block hover:text-[var(--on-surface)]">Hindi</a>
+                    <a href="detail.html"
+                        class="text-[var(--text-color)]  font-semibold my-4 block hover:text-[var(--on-surface)]">Bengali</a>
+                    <a href="detail.html"
+                        class="text-[var(--text-color)]  font-semibold my-4 block hover:text-[var(--on-surface)]">English</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-[100%] overflow-x-scroll bg-[--surface] p-4">
+            <h1 id="mainText" class="text-[var(--on-surface)] font-bold text-[1.8rem] my-4">All Horror Movies</h1>
+            <div id="cont" class="grid grid-cols-2 gap-x-4 md:grid-cols-4 lg:grid-cols-6" style="row-gap: 20px;">
+
+
+                <!-- <div class="w-[99%] min-w-[160px] rounded-[var(--radius-16)] max-w-[200px] aspect-[]">
+                <div class="w-[100%] aspect-[3/4] bg-white rounded-[var(--radius-16)]">
+                    <img src="../images/slider-control.jpg" class="rounded-[var(--radius-16)]" alt="">
+                </div>
+                <p class="line-clamp-1 h-8 text-[var(--on-surface)] text-xl font-bold my-2">Puss in Boots: The
+                    Last Wish
+                </p>
+                <div class="flex items-center h-fit w-[130px] justify-between">
+                    <div class="flex items-center">
+                        <img src="../images/star.png" class="w-6" alt="rating_logo">
+                        <span id="ratings" class="text-[var(--on-surface-variant)] text-lg">8.4</span>
+                    </div>
+                    <span id="Year"
+                        class="bg-[var(--white-alpha-20)] py-[2px] px-4 text-[var(--on-background)]">2022</span>
+                </div>
+            </div> -->
+
+
+
+
+            </div>
+            <div id="loadMore" class="mx-auto w-fit my-8">
+                <button class=" flex items-center bg-[var(--primary)] px-4 py-3 rounded-[var(--radius-8)]">
+                    <div id="loader" class=""></div>
+                    <span class="text-white ">
+                        <p>Load More</p>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="blur" class="fixed bottom-0 left-0 w-full h-[120px] z-50"></div>
+    <div class="hidden"></div>
+</body>
+
+</html>
